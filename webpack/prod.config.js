@@ -53,7 +53,7 @@ module.exports = {
     new ExtractTextPlugin('[name].css', {allChunks: true}),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: '"production"'
+        NODE_ENV: '"production"' //this was changed to NODE_ENV: '"__DEVELOPMENT__"' to view more detailed error logs
       },
 
       __CLIENT__: true,

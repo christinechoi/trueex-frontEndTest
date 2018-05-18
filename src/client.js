@@ -24,7 +24,7 @@ const history = syncHistoryWithStore(_browserHistory, store);
 function initSocket() {
   let socket = io('', {path: '/ws'});
   socket.on('snapshot', (data) => {
-    console.log(data);
+    console.log('hello');
     socket.emit('my other event', { my: 'data from client' });
   });
   socket.on('update', (data) => {
